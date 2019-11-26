@@ -1,6 +1,7 @@
 ﻿'Browser("Search Projects").Page("Search Projects").Link("A/R Billing Upgrade").Click @@ hightlight id_;_Browser("Search Projects").Page("Search Projects").Link("A/R Billing Upgrade")_;_script infofile_;_ZIP::ssf1.xml_;_
+Window("Window").Minimize @@ hightlight id_;_21564410_;_script infofile_;_ZIP::ssf27.xml_;_
 nRows  = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").RowCount
-For row = 15 To nRows ' row 1 is the header row so skip
+For row = 34 To nRows ' row 1 is the header row so skip
 	print row
 	staffingProfile = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").ChildItemCount (row, 4, "Image") @@ hightlight id_;_Browser("Search Projects").Page("Search Projects").Link("A/R Billing Upgrade")_;_script infofile_;_ZIP::ssf1.xml_;_
 	If staffingProfile = 1 Then
@@ -11,6 +12,11 @@ For row = 15 To nRows ' row 1 is the header row so skip
 		Browser("Search Projects").Page("Project Overview_2").WebElement("WebElement").Click @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").WebElement("WebElement")_;_script infofile_;_ZIP::ssf3.xml_;_
 		Browser("Search Projects").Page("Project Overview_2").WebEdit("name").Set "workaround" @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").WebEdit("name")_;_script infofile_;_ZIP::ssf4.xml_;_
 		Browser("Search Projects").Page("Project Overview_2").WebEdit("role").Set "xoutsource" @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").WebEdit("role")_;_script infofile_;_ZIP::ssf5.xml_;_
+		
+		if Browser("Project Overview").Page("Project Overview").Link("Dismiss PPM Physcal Period Warning").Exist (3) then
+			Browser("Project Overview").Page("Project Overview").Link("Dismiss PPM Physcal Period Warning").Click
+		end if 
+
 		Browser("Search Projects").Page("Project Overview_2").WebEdit("resourcePool").Set "UI and Web Development - Team 1 (AMS) (FS)" @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").WebEdit("resourcePool")_;_script infofile_;_ZIP::ssf6.xml_;_
 		Browser("Search Projects").Page("Project Overview_2").WebEdit("costCategory").Set "Employee"
 
@@ -30,14 +36,17 @@ For row = 15 To nRows ' row 1 is the header row so skip
 		Browser("Search Projects").Page("Project Overview_2").Link("Confirm").Click @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").Link("Confirm")_;_script infofile_;_ZIP::ssf11.xml_;_
 		Browser("Search Projects").Page("Project Overview_2").Link("Save").Click @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").Link("Save")_;_script infofile_;_ZIP::ssf12.xml_;_
 		Browser("Search Projects").Page("Project Overview_2").Link("workaround").Check CheckPoint("workaround") @@ script infofile_;_ZIP::ssf14.xml_;_
+		
+'		Browser("Search Projects").Back
 	
 		For backToStartd = 1 To 5 Step 1
 			
 			if Browser("Search Projects").Page("Project Overview_2").Link("Search Projects").Exist (10) then ' standard hack of having to wait after the object appears @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").Link("Search Projects")_;_script infofile_;_ZIP::ssf13.xml_;_
-				wait 1
+				wait 3
 				Browser("Search Projects").Page("Project Overview_2").Link("Search Projects").Click @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").Link("Search Projects")_;_script infofile_;_ZIP::ssf13.xml_;_
+				wait 5
 				If Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").exist (2) Then
-					break
+					Exit for
 				end if
 			End If
 		next	
