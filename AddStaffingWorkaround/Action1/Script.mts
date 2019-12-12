@@ -1,8 +1,8 @@
 ﻿'Browser("Search Projects").Page("Search Projects").Link("A/R Billing Upgrade").Click @@ hightlight id_;_Browser("Search Projects").Page("Search Projects").Link("A/R Billing Upgrade")_;_script infofile_;_ZIP::ssf1.xml_;_
  @@ hightlight id_;_21564410_;_script infofile_;_ZIP::ssf27.xml_;_
 nRows  = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").RowCount
-For row = 2 To nRows ' row 1 is the header row so skip
-	print row
+For row = 42 To nRows ' row 1 is the header row so skip
+	print row & " of " & nRows
 	staffingProfile = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").ChildItemCount (row, 4, "Image") @@ hightlight id_;_Browser("Search Projects").Page("Search Projects").Link("A/R Billing Upgrade")_;_script infofile_;_ZIP::ssf1.xml_;_
 	If staffingProfile = 1 Then
         Set projectLink = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").ChildItem (row, 2, "Link", 0)
@@ -21,7 +21,8 @@ For row = 2 To nRows ' row 1 is the header row so skip
 		Browser("Search Projects").Page("Project Overview_2").WebEdit("costCategory").Set "Employee"
 
 		' got to drag and drop the + sign.  Not easy!!!
-		Browser("Search Projects").InsightObject("InsightObject").Click ' got to click in order for the + 'to' appear
+		Browser("Search Projects").InsightObject("AreaToClick for Plus").Click
+		
 		Browser("Search Projects").Page("Project Overview_2").WebElement("spGanttIndicator + sign").highlight
 		xloc = Browser("Search Projects").Page("Project Overview_2").WebElement("spGanttIndicator + sign").GetROProperty ("abs_x")
 		yloc = Browser("Search Projects").Page("Project Overview_2").WebElement("spGanttIndicator + sign").GetROProperty ("abs_y")
