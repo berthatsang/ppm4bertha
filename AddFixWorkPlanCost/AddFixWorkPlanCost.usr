@@ -12,7 +12,7 @@ DevelopTool=AQT
 
 [Actions]
 Action0=Action0\Script.mts
-addStaffingWorkAround=Action1\Script.mts
+addFixWorkPlanCost=Action1\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -32,7 +32,7 @@ Lang=none
 
 [TulipInfo]
 ProductName=Micro Focus Unified Functional Testing
-Version=14.53
+Version=15.0
 
 [TulipAddins]
 AI=
@@ -47,6 +47,7 @@ XML=
 [ExtraFiles]
 Test.tsp=
 Default.xls=
+Default.xlsx=
 Parameters.mtr=
 Action0\Script.mts=
 Action0\Resource.mtr=
