@@ -4,7 +4,7 @@
 Browser("Search Projects_2").Page("Search Projects").Link("Search").Click @@ script infofile_;_ZIP::ssf85.xml_;_
 
 nRows  = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").RowCount
-For row = 32 To nRows ' row 1 is the header row so skip
+For row = 2 To nRows ' row 1 is the header row so skip
 	projectName = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").GetCellData (row,2)
 	print row & " of " & nRows 
 	workPlanProfile = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").ChildItemCount (row,3, "Image") @@ hightlight id_;_Browser("Search Projects").Page("Search Projects").Link("A/R Billing Upgrade")_;_script infofile_;_ZIP::ssf1.xml_;_
@@ -22,6 +22,9 @@ For row = 32 To nRows ' row 1 is the header row so skip
 		TopLevelActualEffort = Browser("Search Projects_2").Page("View Work Plan_3").WebTable("In Planning").GetCellData (1,2)
 		If TopLevelActualEffort = 0.0 Then
 			print "Project >" & projectName & "< does not have any effort"
+		ElseIf "MSP Integration" = projectName Then ' skip because it has a MS Project integration, so does not allow new task
+			print "Skipping >" & projectName & "< because of MS Project integration"
+		
 			else
 				'		Browser("Search Projects_2").Page("Project Overview_2").Link("View details for the Actual").Click
 				print "Adding workaround task to project >" & projectName & "<"
@@ -42,7 +45,7 @@ For row = 32 To nRows ' row 1 is the header row so skip
 				Browser("Search Projects_2").Page("Enter Actuals").WebButton("Done").Click @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebButton("Done")_;_script infofile_;_ZIP::ssf81.xml_;_
 		End If
 
-		For backToStartd = 1 To 5 Step 1
+		For backToStart = 1 To 5 Step 1
 			if Browser("Search Projects").Page("Project Overview_2").Link("Search Projects").Exist (10) then ' standard hack of having to wait after the object appears @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").Link("Search Projects")_;_script infofile_;_ZIP::ssf13.xml_;_
 				wait 3
 				Browser("Search Projects").Page("Project Overview_2").Link("Search Projects").Click @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").Link("Search Projects")_;_script infofile_;_ZIP::ssf13.xml_;_
