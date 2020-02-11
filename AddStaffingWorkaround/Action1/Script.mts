@@ -28,12 +28,9 @@ Browser("Project Overview_2").Page("Search Staffing Profile").WebButton("PushBut
 'Setting.webpackage("ReplayType") = 2 'Mouse
 'Setting.webpackage("ReplayType") = 1 'Event
 
-'Browser("Project Overview_2").Page("Search Staffing Profile").WebTable("Profile Name").Check CheckPoint("Profile Name") @@ hightlight id_;_Browser("Project Overview 2").Page("Search Staffing Profile").WebTable("Profile Name")_;_script infofile_;_ZIP::ssf62.xml_;_
-
-
 nRows  = Browser("Project Overview_2").Page("Search Staffing Profile").WebTable("Profile Name").RowCount
-For row = 81 To nrows ' row 1 is the header row so skip
-	print row & " of " & nRows
+For row = 2 To nrows ' row 1 is the header row so skip
+	print row -1 & " of " & nRows -1 
 	set projectLink = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").ChildItem (row, 1, "Link",0)
 	projectLink.highlight
 	projName = projectlink.getroproperty("innertext")
@@ -41,10 +38,13 @@ For row = 81 To nrows ' row 1 is the header row so skip
 	projectLink.DoubleClick
 	If projName = "MSP Integration" Then
 		print "skipping project " & projName & " because it is connected to MS Project"
+	ElseIf projName = "Transaction Management" or projName = "Sparta System" Then
+		print "skipping project " & projName & " because it has no staffing profile"
+	ElseIf projName = "Barcode Asset Collection" or projName = "Sparta System" Then
+		print "skipping project " & projName & " UNKOWN PROBLEM"
 	ElseIf  Browser("Project Overview_2").Page("Staffing Profile").Link("workaround").Exist (3) then ' already exists, we are done @@ script infofile_;_ZIP::ssf64.xml_;_
 	' do nothing
 		print "project " & projName	& " already has workaround"
-		Browser("Project Overview_2").Page("Staffing Profile").Link("Search Staffing Profile").Click
 	else
 		print "adding workaround to project " & projName & " which has an href of " & projHref 
 	
@@ -84,9 +84,8 @@ For row = 81 To nrows ' row 1 is the header row so skip
 			Browser("Staffing Profile").Page("Change Staffing Profile").WebRadioGroup("editMode").Select "G" ' gannt @@ script infofile_;_ZIP::ssf77.xml_;_
 			Browser("Staffing Profile").Page("Change Staffing Profile").Link("Done").Click @@ script infofile_;_ZIP::ssf78.xml_;_
 		End If
-		Browser("Project Overview_2").Page("Staffing Profile").Link("Search Staffing Profile").Click @@ script infofile_;_ZIP::ssf92.xml_;_
-		
 	end if
+	Browser("Project Overview_2").Page("Staffing Profile").Link("Search Staffing Profile").Click
 Next
 
 
