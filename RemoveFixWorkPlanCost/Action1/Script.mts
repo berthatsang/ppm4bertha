@@ -50,7 +50,9 @@ For row = 32 To nRows ' row 1 is the header row so skip
 				Window("Google Chrome").Type  micReturn  @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf162.xml_;_
 	
 				Browser("Search Projects_2").Page("Enter Actuals").WebEdit("actualEffort").Set "0" @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("actualEffort")_;_script infofile_;_ZIP::ssf85.xml_;_
-				Browser("Search Projects_2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort").Set "0" @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort(61262")_;_script infofile_;_ZIP::ssf86.xml_;_
+				if Browser("Search Projects_2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort").Exist (1) then ' some work plans do not have this visible @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort(61262")_;_script infofile_;_ZIP::ssf86.xml_;_
+					Browser("Search Projects_2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort").Set "0"
+				end if			
 				Browser("Search Projects_2").Page("Enter Actuals").WebEdit("percentComplete").Set "0" @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("percentComplete")_;_script infofile_;_ZIP::ssf87.xml_;_
 				Browser("Search Projects_2").Page("Enter Actuals").WebButton("Save").Click @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebButton("Save")_;_script infofile_;_ZIP::ssf88.xml_;_
 				Browser("Search Projects_2").Page("Enter Actuals").WebButton("Done").Click @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebButton("Done")_;_script infofile_;_ZIP::ssf89.xml_;_
