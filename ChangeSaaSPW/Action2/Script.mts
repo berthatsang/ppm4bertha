@@ -1,0 +1,1 @@
+﻿Browser("MyAccount - My Products").Page("MyAccount - My Products").WebButton("LogOut").Click @@ hightlight id_;_Browser("MyAccount - My Products").Page("MyAccount - My Products").WebButton("LogOut")_;_script infofile_;_ZIP::ssf1.xml_;_
