@@ -1,0 +1,120 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.1.3.0-UFT_2021_GA
+Project("") = "AddFixWorkPlanCost", "AddFixWorkPlanCost\Test.tsp", "19F31E7F-00D2-4309-B22F-AAFD2D8DE810"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\AddFixWorkPlanCost\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "AddStaffingWorkaround", "AddStaffingWorkaround\Test.tsp", "D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\AddStaffingWorkaround\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "change alm pw", "change alm pw\Test.tsp", "46E0B15C-47DD-4043-AB5E-3FF7529E0FAB"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\change alm pw\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "ChangeSaaS_PPM_PW", "ChangeSaaS_PPM_PW\Test.tsp", "E9A9E433-53B9-4A8E-9954-1C7D7770B5D2"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\ChangeSaaS_PPM_PW\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "ChangeSaaSPW", "ChangeSaaSPW\Test.tsp", "0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\ChangeSaaSPW\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "ppm4Bertha", "ppm4Bertha\Test.tsp", "D92B89DE-E99C-487E-9612-5695998C8160"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\ppm4Bertha\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "RemoveFixWorkPlanCost", "RemoveFixWorkPlanCost\Test.tsp", "58CD5940-F635-4E1B-BF63-624B2B117389"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\RemoveFixWorkPlanCost\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "RemoveStaffingWorkaround", "RemoveStaffingWorkaround\Test.tsp", "D629E3C7-CD4D-48CF-B9DB-2926E44B82B9"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\RemoveStaffingWorkaround\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Project("") = "RemoveStaffingWorkaroundv2", "RemoveStaffingWorkaroundv2\Test.tsp", "0C00D5C8-2B36-4FA3-B89C-9BDCF048A608"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\RemoveStaffingWorkaroundv2\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		19F31E7F-00D2-4309-B22F-AAFD2D8DE810.Debug|Any CPU.Build.0 = Debug|Any CPU
+		19F31E7F-00D2-4309-B22F-AAFD2D8DE810.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		19F31E7F-00D2-4309-B22F-AAFD2D8DE810.Release|Any CPU.Build.0 = Release|Any CPU
+		19F31E7F-00D2-4309-B22F-AAFD2D8DE810.Release|Any CPU.ActiveCfg = Release|Any CPU
+		D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2.Debug|Any CPU.Build.0 = Debug|Any CPU
+		D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2.Release|Any CPU.Build.0 = Release|Any CPU
+		D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2.Release|Any CPU.ActiveCfg = Release|Any CPU
+		46E0B15C-47DD-4043-AB5E-3FF7529E0FAB.Debug|Any CPU.Build.0 = Debug|Any CPU
+		46E0B15C-47DD-4043-AB5E-3FF7529E0FAB.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		46E0B15C-47DD-4043-AB5E-3FF7529E0FAB.Release|Any CPU.Build.0 = Release|Any CPU
+		46E0B15C-47DD-4043-AB5E-3FF7529E0FAB.Release|Any CPU.ActiveCfg = Release|Any CPU
+		E9A9E433-53B9-4A8E-9954-1C7D7770B5D2.Debug|Any CPU.Build.0 = Debug|Any CPU
+		E9A9E433-53B9-4A8E-9954-1C7D7770B5D2.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		E9A9E433-53B9-4A8E-9954-1C7D7770B5D2.Release|Any CPU.Build.0 = Release|Any CPU
+		E9A9E433-53B9-4A8E-9954-1C7D7770B5D2.Release|Any CPU.ActiveCfg = Release|Any CPU
+		0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F.Debug|Any CPU.Build.0 = Debug|Any CPU
+		0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F.Release|Any CPU.Build.0 = Release|Any CPU
+		0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F.Release|Any CPU.ActiveCfg = Release|Any CPU
+		D92B89DE-E99C-487E-9612-5695998C8160.Debug|Any CPU.Build.0 = Debug|Any CPU
+		D92B89DE-E99C-487E-9612-5695998C8160.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		D92B89DE-E99C-487E-9612-5695998C8160.Release|Any CPU.Build.0 = Release|Any CPU
+		D92B89DE-E99C-487E-9612-5695998C8160.Release|Any CPU.ActiveCfg = Release|Any CPU
+		58CD5940-F635-4E1B-BF63-624B2B117389.Debug|Any CPU.Build.0 = Debug|Any CPU
+		58CD5940-F635-4E1B-BF63-624B2B117389.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		58CD5940-F635-4E1B-BF63-624B2B117389.Release|Any CPU.Build.0 = Release|Any CPU
+		58CD5940-F635-4E1B-BF63-624B2B117389.Release|Any CPU.ActiveCfg = Release|Any CPU
+		D629E3C7-CD4D-48CF-B9DB-2926E44B82B9.Debug|Any CPU.Build.0 = Debug|Any CPU
+		D629E3C7-CD4D-48CF-B9DB-2926E44B82B9.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		D629E3C7-CD4D-48CF-B9DB-2926E44B82B9.Release|Any CPU.Build.0 = Release|Any CPU
+		D629E3C7-CD4D-48CF-B9DB-2926E44B82B9.Release|Any CPU.ActiveCfg = Release|Any CPU
+		0C00D5C8-2B36-4FA3-B89C-9BDCF048A608.Debug|Any CPU.Build.0 = Debug|Any CPU
+		0C00D5C8-2B36-4FA3-B89C-9BDCF048A608.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		0C00D5C8-2B36-4FA3-B89C-9BDCF048A608.Release|Any CPU.Build.0 = Release|Any CPU
+		0C00D5C8-2B36-4FA3-B89C-9BDCF048A608.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal
