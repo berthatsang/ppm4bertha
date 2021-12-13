@@ -1,5 +1,20 @@
 ﻿' Note: Object recognition seems to work much better if using IE as the browser
 
+print "***** Starting test: removeStaffingWorkAround *****"
+
+'until no more browsers exist
+While Browser("creationtime:=0").Exist(0)
+'Close the browser
+Browser("creationtime:=0").highlight
+Browser("creationtime:=0").close
+Wend
+
+SystemUtil.Run "Chrome.exe", "http://ppmdemo:8084/itg/project/SearchProjects.do"
+
+Browser("PPM Logon").Page("PPM Logon").WebEdit("USERNAME").Set "admin" @@ script infofile_;_ZIP::ssf32.xml_;_
+Browser("PPM Logon").Page("PPM Logon").WebEdit("PASSWORD").SetSecure "61b72c299a2c7e2741469441d5dce675b00a05c71a515694" @@ script infofile_;_ZIP::ssf33.xml_;_
+Browser("PPM Logon").Page("PPM Logon").WebElement("label-LOGON_SUBMIT_BUTTON_CAPT").Click @@ script infofile_;_ZIP::ssf34.xml_;_
+
 nRows  = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").RowCount
 For row = 2 To nRows ' row 1 is the header row so skip
 	print row & " of " &  nRows

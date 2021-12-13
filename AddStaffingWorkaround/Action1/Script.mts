@@ -1,8 +1,19 @@
-﻿' before running, open a Chrome browser
-' navigate to http://ppmdemo:8084/itg/
-' login with admin account
+﻿print "***** Starting test: addStaffingWorkAround *****"
 
-Browser("Project Overview").Navigate "http://ppmdemo:8084/itg/project/SearchProjects.do"
+'until no more browsers exist
+While Browser("creationtime:=0").Exist(0)
+'Close the browser
+Browser("creationtime:=0").highlight
+Browser("creationtime:=0").close
+Wend
+
+SystemUtil.Run "Chrome.exe", "http://ppmdemo:8084/itg/project/SearchProjects.do"
+
+
+Browser("Project Overview_2").Page("Search Projects").WebEdit("USERNAME").Set "admin" @@ script infofile_;_ZIP::ssf93.xml_;_
+Browser("Project Overview_2").Page("Search Projects").WebEdit("PASSWORD").SetSecure "61b381f18beba23bc8aa6a6d8c8cd744ab5a0a61cddf2413" @@ script infofile_;_ZIP::ssf94.xml_;_
+Browser("Project Overview_2").Page("Search Projects").WebElement("label-LOGON_SUBMIT_BUTTON_CAPT").Click @@ script infofile_;_ZIP::ssf95.xml_;_
+
 Browser("Project Overview_2").Page("Search Projects").Link("SEARCH_2").Click @@ script infofile_;_ZIP::ssf79.xml_;_
 Browser("Project Overview_2").Page("Search Projects").Link("Staffing Profiles").Click
 'Browser("Project Overview_2").Page("Staffing Profile").Link("Search Staffing Profile").Click

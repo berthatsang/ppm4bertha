@@ -7,7 +7,6 @@ Project("") = "AddFixWorkPlanCost", "AddFixWorkPlanCost\Test.tsp", "19F31E7F-00D
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\AddFixWorkPlanCost\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Project("") = "AddStaffingWorkaround", "AddStaffingWorkaround\Test.tsp", "D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2"
@@ -15,7 +14,6 @@ Project("") = "AddStaffingWorkaround", "AddStaffingWorkaround\Test.tsp", "D37C4F
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\AddStaffingWorkaround\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Project("") = "change alm pw", "change alm pw\Test.tsp", "46E0B15C-47DD-4043-AB5E-3FF7529E0FAB"
@@ -23,7 +21,6 @@ Project("") = "change alm pw", "change alm pw\Test.tsp", "46E0B15C-47DD-4043-AB5
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\change alm pw\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Project("") = "ChangeSaaS_PPM_PW", "ChangeSaaS_PPM_PW\Test.tsp", "E9A9E433-53B9-4A8E-9954-1C7D7770B5D2"
@@ -31,7 +28,6 @@ Project("") = "ChangeSaaS_PPM_PW", "ChangeSaaS_PPM_PW\Test.tsp", "E9A9E433-53B9-
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\ChangeSaaS_PPM_PW\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Project("") = "ChangeSaaSPW", "ChangeSaaSPW\Test.tsp", "0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F"
@@ -39,7 +35,6 @@ Project("") = "ChangeSaaSPW", "ChangeSaaSPW\Test.tsp", "0AFEDB7E-0FA6-4151-8F0D-
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\ChangeSaaSPW\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Project("") = "ppm4Bertha", "ppm4Bertha\Test.tsp", "D92B89DE-E99C-487E-9612-5695998C8160"
@@ -47,7 +42,6 @@ Project("") = "ppm4Bertha", "ppm4Bertha\Test.tsp", "D92B89DE-E99C-487E-9612-5695
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\ppm4Bertha\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Project("") = "RemoveFixWorkPlanCost", "RemoveFixWorkPlanCost\Test.tsp", "58CD5940-F635-4E1B-BF63-624B2B117389"
@@ -55,7 +49,6 @@ Project("") = "RemoveFixWorkPlanCost", "RemoveFixWorkPlanCost\Test.tsp", "58CD59
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\RemoveFixWorkPlanCost\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Project("") = "RemoveStaffingWorkaround", "RemoveStaffingWorkaround\Test.tsp", "D629E3C7-CD4D-48CF-B9DB-2926E44B82B9"
@@ -63,12 +56,18 @@ Project("") = "RemoveStaffingWorkaround", "RemoveStaffingWorkaround\Test.tsp", "
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\RemoveStaffingWorkaround\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
-		BaselineId = 
 	EndProjectSection
 EndProject
 Project("") = "RemoveStaffingWorkaroundv2", "RemoveStaffingWorkaroundv2\Test.tsp", "0C00D5C8-2B36-4FA3-B89C-9BDCF048A608"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\RemoveStaffingWorkaroundv2\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "CreateWhatIfScenarios", "CreateWhatIfScenarios\Test.tsp", "F88DDCDC-1A98-496A-B6A1-3C946690A03A"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\CreateWhatIfScenarios\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
 		BaselineId = 
@@ -116,5 +115,9 @@ Global
 		0C00D5C8-2B36-4FA3-B89C-9BDCF048A608.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		0C00D5C8-2B36-4FA3-B89C-9BDCF048A608.Release|Any CPU.Build.0 = Release|Any CPU
 		0C00D5C8-2B36-4FA3-B89C-9BDCF048A608.Release|Any CPU.ActiveCfg = Release|Any CPU
+		F88DDCDC-1A98-496A-B6A1-3C946690A03A.Debug|Any CPU.Build.0 = Debug|Any CPU
+		F88DDCDC-1A98-496A-B6A1-3C946690A03A.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		F88DDCDC-1A98-496A-B6A1-3C946690A03A.Release|Any CPU.Build.0 = Release|Any CPU
+		F88DDCDC-1A98-496A-B6A1-3C946690A03A.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,15 +1,23 @@
-﻿' before running, open a Chrome browser
-' navigate to http://ppmdemo:8084/itg/
-' login with admin account
+﻿print "***** Starting test: removeFixWorkPlanWorkAround *****"
 
-' also, navigate back to "Dashboard - Key Status Information" using bread crumbs if you need to restart this script
-'
-Browser("Project Overview").Navigate "http://ppmdemo:8084/itg/project/SearchProjects.do"
+'until no more browsers exist
+While Browser("creationtime:=0").Exist(0)
+'Close the browser
+Browser("creationtime:=0").highlight
+Browser("creationtime:=0").close
+Wend
+
+SystemUtil.Run "Chrome.exe", "http://ppmdemo:8084/itg/project/SearchProjects.do"
+
+Browser("View Work Plan_2").Page("PPM Logon").WebEdit("USERNAME").Set "admin" @@ script infofile_;_ZIP::ssf176.xml_;_
+Browser("View Work Plan_2").Page("PPM Logon").WebEdit("PASSWORD").SetSecure "61b72773fc97618e2603ae2e84b37b0997032e65c4d6d405" @@ script infofile_;_ZIP::ssf177.xml_;_
+Browser("View Work Plan_2").Page("PPM Logon").WebElement("label-LOGON_SUBMIT_BUTTON_CAPT").Click @@ script infofile_;_ZIP::ssf178.xml_;_
+
 Browser("Search Projects_2").Page("Search Projects").WebEdit("pageSize").Set "550" ' ridiculously large number to get them all @@ script infofile_;_ZIP::ssf101.xml_;_
 Browser("Search Projects_2").Page("Search Projects").Link("Search").Click @@ script infofile_;_ZIP::ssf102.xml_;_
 
 nRows  = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").RowCount
-For row = 32 To nRows ' row 1 is the header row so skip
+For row = 2 To nRows ' row 1 is the header row so skip
 	projectName = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").GetCellData (row,2)
 	print row-1 & " of " & nRows-1 
 	workPlanProfile = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").ChildItemCount (row,3, "Image") @@ hightlight id_;_Browser("Search Projects").Page("Search Projects").Link("A/R Billing Upgrade")_;_script infofile_;_ZIP::ssf1.xml_;_
@@ -41,13 +49,13 @@ For row = 32 To nRows ' row 1 is the header row so skip
 				' This is an insight recording
 				' needed to record the keystrokes
 				Browser("View Work Plan_2").InsightObject("InsightObject_3").Click @@ hightlight id_;_1_;_script infofile_;_ZIP::ssf155.xml_;_
-				Window("Google Chrome").Type  micShiftDwn  @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf156.xml_;_
+				Window("Google Chrome").Type  micShiftDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf156.xml_;_
 				Window("Google Chrome").Type micShiftDwn +  micTab  + micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf157.xml_;_
 				Window("Google Chrome").Type micShiftDwn +  micTab  + micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf158.xml_;_
-				Window("Google Chrome").Type  micShiftUp  @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf159.xml_;_
-				Window("Google Chrome").Type  micDwn  @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf160.xml_;_
-				Window("Google Chrome").Type  micDwn  @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf161.xml_;_
-				Window("Google Chrome").Type  micReturn  @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf162.xml_;_
+				Window("Google Chrome").Type  micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf159.xml_;_
+				Window("Google Chrome").Type  micDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf160.xml_;_
+				Window("Google Chrome").Type  micDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf161.xml_;_
+				Window("Google Chrome").Type  micReturn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf162.xml_;_
 	
 				Browser("Search Projects_2").Page("Enter Actuals").WebEdit("actualEffort").Set "0" @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("actualEffort")_;_script infofile_;_ZIP::ssf85.xml_;_
 				if Browser("Search Projects_2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort").Exist (1) then ' some work plans do not have this visible @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort(61262")_;_script infofile_;_ZIP::ssf86.xml_;_
@@ -72,7 +80,12 @@ For row = 32 To nRows ' row 1 is the header row so skip
 				if Browser("View Work Plan_2").Page("View Work Plan").WebElement("workaround").Exist (3) then
 					msgbox "workaround not deleted from project " & projectName 			
 				End If
-			end if  @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebButton("Done")_;_script infofile_;_ZIP::ssf81.xml_;_
+				
+				'set view back to Quick View
+				print "Set view to Quick View  for project >" & projectName & "<"
+				Browser("Search Projects_2").Page("View Work Plan_5").WebList("select").Select "Quick View"
+				wait 3 ' it takes a little while to change view
+			end if @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebButton("Done")_;_script infofile_;_ZIP::ssf81.xml_;_
 		End If
 
 		Browser("Search Projects").Page("Project Overview_2").Link("Search Projects").Click @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 2").Link("Search Projects")_;_script infofile_;_ZIP::ssf13.xml_;_
@@ -81,11 +94,5 @@ For row = 32 To nRows ' row 1 is the header row so skip
 		print "Project >" & projectName & "< does not have a work plan"
 	End If
 Next
-
-
  @@ hightlight id_;_Browser("Search Projects").Page("Project Overview 3").WebElement("pGanttNEW1574706060164")_;_script infofile_;_ZIP::ssf23.xml_;_
 foo = 1
-
-
-
-

@@ -1,4 +1,18 @@
-﻿Browser("Project Overview").Navigate "http://ppmdemo:8084/itg/project/SearchProjects.do"
+﻿print "Starting test: addFixWorkPlanWorkCost"
+
+'until no more browsers exist
+While Browser("creationtime:=0").Exist(0)
+'Close the browser
+Browser("creationtime:=0").highlight
+Browser("creationtime:=0").close
+Wend
+
+SystemUtil.Run "Chrome.exe", "http://ppmdemo:8084/itg/project/SearchProjects.do"
+
+Browser("Search Projects_2").Page("Search Projects").WebEdit("USERNAME").Set "admin" @@ script infofile_;_ZIP::ssf86.xml_;_
+Browser("Search Projects_2").Page("Search Projects").WebEdit("PASSWORD").SetSecure "61b375bbe33b17459618ababc7e1446da75aabb32eba3710" @@ script infofile_;_ZIP::ssf87.xml_;_
+Browser("Search Projects_2").Page("Search Projects").WebElement("label-LOGON_SUBMIT_BUTTON_CAPT").Click @@ script infofile_;_ZIP::ssf88.xml_;_
+
 ' the following click always fails with a "can't find object message, but that is bull.
 ' the description is fine. I am convinced there is a corruption behind the scene. ron sercely
 Browser("Search Projects_2").Page("Search Projects").Link("Search").Click @@ script infofile_;_ZIP::ssf85.xml_;_
@@ -33,7 +47,7 @@ For row = 2 To nRows ' row 1 is the header row so skip
 				Browser("Search Projects_2").Page("Add Tasks Page").WebEdit("Task Name").Set "workaround"
 				Browser("Search Projects_2").Page("Add Tasks Page").WebButton("Task Done").Click @@ hightlight id_;_Browser("Search Projects 2").Page("Add Tasks Page").WebButton("topDoneB")_;_script infofile_;_ZIP::ssf74.xml_;_
 
-				If not Browser("Search Projects_2").Page("View Work Plan_5").Link("Edit").Exist (5) then ' we are probably in quick view, which does not allow editing
+				If not Browser("Search Projects_2").Page("View Work Plan_5").Link("Edit").Exist (10) then ' we are probably in quick view, which does not allow editing
 					Browser("Search Projects_2").Page("View Work Plan").WebList("select").Select "Schedule View" @@ script infofile_;_ZIP::ssf84.xml_;_
 				end if
 
