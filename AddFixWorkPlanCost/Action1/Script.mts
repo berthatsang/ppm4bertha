@@ -1,4 +1,4 @@
-﻿print "Starting test: addFixWorkPlanWorkCost"
+﻿print "Starting test: " & Environment("TestName")
 
 'until no more browsers exist
 While Browser("creationtime:=0").Exist(0)

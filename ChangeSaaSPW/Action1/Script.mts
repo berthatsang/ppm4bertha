@@ -1,4 +1,4 @@
-﻿print "Starting test: ChangeSaaSPW"
+﻿print "Starting test: " & Environment("TestName")
 
 Environment.Value("basePassword") = "PpmOctane0"
 basePassword = Environment.Value("basePassword")

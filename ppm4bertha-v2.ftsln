@@ -16,13 +16,6 @@ Project("") = "AddStaffingWorkaround", "AddStaffingWorkaround\Test.tsp", "D37C4F
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
-Project("") = "change alm pw", "change alm pw\Test.tsp", "46E0B15C-47DD-4043-AB5E-3FF7529E0FAB"
-	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
-		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\change alm pw\Test.tsp
-		Keyword = QTP
-		OpenAsReadOnly = False
-	EndProjectSection
-EndProject
 Project("") = "ChangeSaaSPW", "ChangeSaaSPW\Test.tsp", "0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F"
 	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\ChangeSaaSPW\Test.tsp
@@ -51,6 +44,14 @@ Project("") = "CreateWhatIfScenarios", "CreateWhatIfScenarios\Test.tsp", "F88DDC
 		OpenAsReadOnly = False
 	EndProjectSection
 EndProject
+Project("") = "change alm pw", "change alm pw\Test.tsp", "6CFECC9F-1B99-482A-BB8B-3D1BC45AB9B8"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\change alm pw\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+		BaselineId = 
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,10 +66,6 @@ Global
 		D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2.Release|Any CPU.Build.0 = Release|Any CPU
 		D37C4F8F-252A-4E4F-84A9-6E5E8CC741D2.Release|Any CPU.ActiveCfg = Release|Any CPU
-		46E0B15C-47DD-4043-AB5E-3FF7529E0FAB.Debug|Any CPU.Build.0 = Debug|Any CPU
-		46E0B15C-47DD-4043-AB5E-3FF7529E0FAB.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		46E0B15C-47DD-4043-AB5E-3FF7529E0FAB.Release|Any CPU.Build.0 = Release|Any CPU
-		46E0B15C-47DD-4043-AB5E-3FF7529E0FAB.Release|Any CPU.ActiveCfg = Release|Any CPU
 		0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F.Debug|Any CPU.Build.0 = Debug|Any CPU
 		0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		0AFEDB7E-0FA6-4151-8F0D-0C35A50E089F.Release|Any CPU.Build.0 = Release|Any CPU
@@ -85,5 +82,9 @@ Global
 		F88DDCDC-1A98-496A-B6A1-3C946690A03A.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		F88DDCDC-1A98-496A-B6A1-3C946690A03A.Release|Any CPU.Build.0 = Release|Any CPU
 		F88DDCDC-1A98-496A-B6A1-3C946690A03A.Release|Any CPU.ActiveCfg = Release|Any CPU
+		6CFECC9F-1B99-482A-BB8B-3D1BC45AB9B8.Debug|Any CPU.Build.0 = Debug|Any CPU
+		6CFECC9F-1B99-482A-BB8B-3D1BC45AB9B8.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		6CFECC9F-1B99-482A-BB8B-3D1BC45AB9B8.Release|Any CPU.Build.0 = Release|Any CPU
+		6CFECC9F-1B99-482A-BB8B-3D1BC45AB9B8.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal
