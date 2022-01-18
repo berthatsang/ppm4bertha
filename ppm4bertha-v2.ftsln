@@ -49,6 +49,13 @@ Project("") = "change alm pw", "change alm pw\Test.tsp", "6CFECC9F-1B99-482A-BB8
 		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\change alm pw\Test.tsp
 		Keyword = QTP
 		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "RemoveWhatIfScenarios", "RemoveWhatIfScenarios\Test.tsp", "F1B03557-EDAA-47A3-8E74-82560CAC9A5C"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\demo\Documents\UFT One\ppm4bertha\RemoveWhatIfScenarios\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
 		BaselineId = 
 	EndProjectSection
 EndProject
@@ -86,5 +93,9 @@ Global
 		6CFECC9F-1B99-482A-BB8B-3D1BC45AB9B8.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		6CFECC9F-1B99-482A-BB8B-3D1BC45AB9B8.Release|Any CPU.Build.0 = Release|Any CPU
 		6CFECC9F-1B99-482A-BB8B-3D1BC45AB9B8.Release|Any CPU.ActiveCfg = Release|Any CPU
+		F1B03557-EDAA-47A3-8E74-82560CAC9A5C.Debug|Any CPU.Build.0 = Debug|Any CPU
+		F1B03557-EDAA-47A3-8E74-82560CAC9A5C.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		F1B03557-EDAA-47A3-8E74-82560CAC9A5C.Release|Any CPU.Build.0 = Release|Any CPU
+		F1B03557-EDAA-47A3-8E74-82560CAC9A5C.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal

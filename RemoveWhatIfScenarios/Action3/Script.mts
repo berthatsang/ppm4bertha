@@ -1,0 +1,1 @@
+﻿Browser("Scenario List").Page("Scenario List").WebMenu("WebMenu_2").Select "Sign out (Admin User)" @@ hightlight id_;_Browser("Scenario List").Page("Scenario List").WebMenu("WebMenu 2")_;_script infofile_;_ZIP::ssf2.xml_;_
