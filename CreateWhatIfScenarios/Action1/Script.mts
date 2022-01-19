@@ -141,7 +141,14 @@ For xxx = 0 To 10 Step 1
 		resources = resources & title &","
 	else
 		Exit for
-	end if 
+	end if
+	' don't know why, bu t the exist() above with index finds lots of items that repeat the last value
+	' this looks for, and breaks out of that
+	resourceArray = split (resources, ",")
+	If title = resourceArray(ubound(resourceArray)-1 ) Then
+		Exit for
+	end If
+	
 next
 print "All Resource Pools:" & resources
 
@@ -232,9 +239,9 @@ next
 
 
 Browser("Scenario Details").Page("Create Scenario").WebButton("Create").Click
-if Browser("Scenario Details").Page("Scenario Details").WebButton("Apply Preview").Exist (30) then
+if Browser("Scenario Details").Page("Scenario Details").WebButton("Apply Preview").Exist (90) then
 else
-	msgbox "Scenario not created:" & datatable("Scenarios").value
+	msgbox "Scenario not created:" & datatable.Value("Scenarios")
 end if
 wait 5
 
@@ -268,7 +275,9 @@ For each item in itemsToMakeGrey
 	
 Next
 
-Browser("Scenario Details").Page("Scenario Details").WebButton("Save").Click @@ script infofile_;_ZIP::ssf83.xml_;_
+If greyContents <> "" Then ' if we didn't exclude at least one item, there is no need (or ability) to click save
+	Browser("Scenario Details").Page("Scenario Details").WebButton("Save").Click @@ script infofile_;_ZIP::ssf83.xml_;_
+End If
 if Browser("Scenario Details").Page("Scenario Details").WebButton("Apply Preview").Exist (30) then
 else
 	msgbox "Scenario not created"

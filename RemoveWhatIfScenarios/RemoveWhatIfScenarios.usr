@@ -13,8 +13,8 @@ DevelopTool=AQT
 [Actions]
 Action0=Action0\Script.mts
 Login to PPM=Action1\Script.mts
-Delete+Rename Scenario=Action2\Script.mts
 Logout=Action3\Script.mts
+Delete+Rename Scenario=Action2\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -39,13 +39,16 @@ Version=2021
 [TulipAddins]
 AI=
 Database=
-Delphi=
 File Content=
 Insight=
+SAP NWBC Desktop=
+SAP=
+SAPUI5=
+SAPWebExt=
 Windows Applications=
 TEA=
-UI Automation=
 Web=
+WPF=
 XML=
 
 [ExtraFiles]
@@ -59,9 +62,9 @@ Action0\ObjectRepository.bdb=
 Action1\Script.mts=
 Action1\Resource.mtr=
 Action1\ObjectRepository.bdb=
-Action2\Script.mts=
-Action2\Resource.mtr=
-Action2\ObjectRepository.bdb=
 Action3\Script.mts=
 Action3\Resource.mtr=
 Action3\ObjectRepository.bdb=
+Action2\Script.mts=
+Action2\Resource.mtr=
+Action2\ObjectRepository.bdb=
