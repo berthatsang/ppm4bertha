@@ -16,7 +16,12 @@ If Browser("Scenario List").Page("Scenario List").Link("Scenario Name RRS").Exis
 	
 	Browser("Scenario List").Page("Change Scenario Constraints").WebButton("Try It Out Button").Click @@ hightlight id_;_Browser("Scenario List").Page("Change Scenario Constraints").WebButton("Try It Out")_;_script infofile_;_ZIP::ssf7.xml_;_
 	Browser("Scenario List").Page("Scenario Details").WebButton("Save Button").Click @@ hightlight id_;_Browser("Scenario List").Page("Scenario Details").WebButton("Save")_;_script infofile_;_ZIP::ssf8.xml_;_
-	Browser("Scenario List").Page("Scenario Details").WebButton("Back To Scenario List Link").Click
+	
+	If Browser("Scenario List").Page("Scenario Details").WebButton("Back To Scenario List Link").Exist(20) Then
+		Wait(2)
+		Browser("Scenario List").Page("Scenario Details").WebButton("Back To Scenario List Link").Click
+	End  If
+	
 End If
 
 foo = 1

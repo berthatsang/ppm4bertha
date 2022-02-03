@@ -16,3 +16,6 @@ Browser("PPM Logon").Page("PPM Logon").WebEdit("PASSWORD").SetSecure "61e6fa4873
 Browser("PPM Logon").Page("PPM Logon").WebButton("Submit Query").Click @@ hightlight id_;_Browser("PPM Logon").Page("PPM Logon").WebButton("Submit Query")_;_script infofile_;_ZIP::ssf3.xml_;_
 Browser("PPM Logon").Page("PPM Logon").Link("OPEN").Click @@ hightlight id_;_Browser("PPM Logon").Page("PPM Logon").Link("OPEN")_;_script infofile_;_ZIP::ssf4.xml_;_
 Browser("PPM Logon").Page("PPM Logon").Link("What-if Analysis").Click @@ hightlight id_;_Browser("PPM Logon").Page("PPM Logon").Link("What-if Analysis")_;_script infofile_;_ZIP::ssf5.xml_;_
+
+' Set zoom to 100%
+Window("Google Chrome").Type micCtrlDwn + "0" + micCtrlUp

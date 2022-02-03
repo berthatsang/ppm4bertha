@@ -39,16 +39,13 @@ Version=2021
 [TulipAddins]
 AI=
 Database=
+Delphi=
 File Content=
 Insight=
-SAP NWBC Desktop=
-SAP=
-SAPUI5=
-SAPWebExt=
 Windows Applications=
 TEA=
+UI Automation=
 Web=
-WPF=
 XML=
 
 [ExtraFiles]
