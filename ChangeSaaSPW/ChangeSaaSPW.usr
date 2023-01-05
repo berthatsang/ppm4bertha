@@ -34,7 +34,7 @@ Lang=none
 
 [TulipInfo]
 ProductName=Micro Focus UFT One
-Version=2021
+Version=2022
 
 [TulipAddins]
 AI=
@@ -46,6 +46,7 @@ Windows Applications=
 TEA=
 UI Automation=
 Web=
+WPF=
 XML=
 
 [ExtraFiles]

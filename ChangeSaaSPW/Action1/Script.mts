@@ -1,4 +1,5 @@
-﻿' Test 05/01/2023
+﻿' 05/01/2023 Bertha Tsang Updated
+
 print "Starting test: " & Environment("TestName")
 
 '  SaaS doesn't allow you to use the same password within the past 12 passwords.  
@@ -38,7 +39,7 @@ Browser("Login").Page("Login").WebButton("CONTINUE").Click @@ hightlight id_;_Br
 Browser("Login").Page("Login").WebEdit("password").Set curPassword 
 
 Browser("Login").Page("Login").WebButton("SIGN IN").Click @@ hightlight id_;_Browser("Login").Page("Login").WebButton("SIGN IN")_;_script infofile_;_ZIP::ssf16.xml_;_
-' Browser("Login").Page("Login").WebButton("SIGN IN").Click @@ hightlight id_;_Browser("Login").Page("Login").WebButton("SIGN IN")_;_script infofile_;_ZIP::ssf16.xml_;_ -- not needed
+' Browser("Login").Page("Login").WebButton("SIGN IN").Click @@ hightlight id_;_Browser("Login").Page("Login").WebButton("SIGN IN")_;_script infofile_;_ZIP::ssf16.xml_;_
 
 If Browser("Login").Page("Login - MyAccount").WebElement("The login name or password").Exist (10) Then
 	MsgBox "Could not login with password: " & curPassword 
