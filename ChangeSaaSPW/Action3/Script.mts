@@ -49,4 +49,4 @@ Browser("MyAccount - My Products").Page("Micro Focus - Authentication_2").Link("
 
 'Not sure why, but clicking back seems to log you out!  Great for me on this run as I only wanted to change one user, but more problematic if you want to do all users.
 ' Maybe next time, don't bother going back nicely and go straight to PRODUCTS tab.
-Browser("MyAccount - My Products").Page("MyAccount - My Products").Link("PRODUCTS.*").Click @@ hightlight id_;_Browser("MyAccount - My Products").Page("MyAccount - My Products").Link("PRODUCTS 9+")_;_script infofile_;_ZIP::ssf14.xml_;_
+' Browser("MyAccount - My Products").Page("MyAccount - My Products").Link("PRODUCTS.*").Click @@ hightlight id_;_Browser("MyAccount - My Products").Page("MyAccount - My Products").Link("PRODUCTS 9+")_;_script infofile_;_ZIP::ssf14.xml_;_ -- not needed
