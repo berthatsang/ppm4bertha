@@ -1,4 +1,5 @@
-﻿print "Starting test: " & Environment("TestName")
+﻿' Test 05/01/2023
+print "Starting test: " & Environment("TestName")
 
 '  SaaS doesn't allow you to use the same password within the past 12 passwords.  
 '  This script logs in as a user and changes the password 12 times and finally sets 
