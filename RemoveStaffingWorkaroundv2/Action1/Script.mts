@@ -2,9 +2,9 @@
 
 'until no more browsers exist
 While Browser("creationtime:=0").Exist(0)
-'Close the browser
-Browser("creationtime:=0").highlight
-Browser("creationtime:=0").close
+	'Close the browser
+	Browser("creationtime:=0").highlight
+	Browser("creationtime:=0").close
 Wend
 
 SystemUtil.Run "Chrome.exe", "http://ppmdemo:8084/itg/project/SearchProjects.do"
@@ -12,6 +12,24 @@ SystemUtil.Run "Chrome.exe", "http://ppmdemo:8084/itg/project/SearchProjects.do"
 Browser("Project Overview_2").Page("Search Projects").WebEdit("USERNAME").Set "admin" @@ script infofile_;_ZIP::ssf93.xml_;_
 Browser("Project Overview_2").Page("Search Projects").WebEdit("PASSWORD").SetSecure "61b73ad87c686d0d7e0299e95eb63f9f2382f831ff5ed3df" @@ script infofile_;_ZIP::ssf94.xml_;_
 Browser("Project Overview_2").Page("Search Projects").WebElement("label-LOGON_SUBMIT_BUTTON_CAPT").Click @@ script infofile_;_ZIP::ssf95.xml_;_
+
+'Creating a description object
+
+'Set btnsearch = Description.Create() 'Adding descriptions and properties
+'btnsearch("type").value = "Button"
+'btnsearch("name").value = "Search"
+'btnsearch("html tag").value = "INPUT" ' Using the same to script it
+'Browser("View Work Plan_2").Page("PPM Logon").WebButton(btnsearch).Click
+Browser("Project Overview_2").Page("Search Projects").WebButton("SEARCH_BUTTON_LINK").Click
+
+'Browser("Search Projects").Page("Search Projects").WebElement("html tag:=SPAN","innertext:=Search").click
+'Browser("Project Overview_2").Page("Search Projects").WebElement("html tag:=SPAN","innertext:=Search", "x:=877", "y:=468").click
+'Browser("Project Overview_2").Page("Search Projects").WebElement("html tag:=SPAN","innertext:=Search","innerhtml:=Search", "x:=877", "y:=468").click
+
+'Browser("Project Overview_2").Page("Search Projects").WebElement("Search").Click
+'Browser("Project Overview_2").InsightObject("SearchInsightObject").Click
+'AIUtil("button", "", micFromBottom, 1).Click
+
 
 ' also, navigate back to "Dashboard - Key Status Information" using bread crumbs if you need to restart this script
 
@@ -55,10 +73,16 @@ For row = 2 To nrows ' row 1 is the header row so skip
 		print "skipping Staffing Profile " & projName & " UNKOWN PROBLEM"
 	ElseIf  Browser("Project Overview_2").Page("Staffing Profile").Link("workaround").Exist (3) then
 		print "removing workaround from Staffing Profile " & projName & " which has an href of " & projHref
+		wait 10
 		Browser("Project Overview_2").Page("Staffing Profile").Link("workaround").highlight 
 		wait 5 ' otherwise, the following click sometimes get "lost"
 		' I think this is because it is using an Insight object
-		Browser("Project Overview_2").InsightObject("workaroundCheckpox").Click
+		'Browser("Project Overview_2").InsightObject("workaroundCheckpox1").Click
+		Browser("Project Overview_2").InsightObject("workaround").Click
+
+'Browser("Project Overview_2").Page("Staffing Profile").WebElement("WebElement_5").Click
+'Browser("Project Overview_2").Page("Staffing Profile").WebElement("WebElement_4").Click @@ script infofile_;_ZIP::ssf96.xml_;_
+
 		Browser("Project Overview_2").Page("Staffing Profile").WebElement("confirm Delete").Click @@ script infofile_;_ZIP::ssf94.xml_;_
 		Browser("Project Overview_2").Page("Staffing Profile").Link("Yes").Click @@ script infofile_;_ZIP::ssf95.xml_;_
 		

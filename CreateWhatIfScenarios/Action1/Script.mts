@@ -1,7 +1,7 @@
 ﻿print "Starting test:" & environment("TestName")
 
 ' Uncomment this if you want debug statements
-'foo= 1
+foo= 1
 	
 'Close browsers until no more browsers exist
 While Browser("creationtime:=0").Exist(0)
@@ -21,7 +21,7 @@ Browser("Scenario Details").Page("PPM Logon").WebEdit("PASSWORD").Set "mfDemo$20
 Browser("Scenario Details").Page("PPM Logon").WebElement("Sign in Button").Click @@ hightlight id_;_Browser("Scenario Details").Page("PPM Logon").WebElement("label-LOGON SUBMIT BUTTON CAPT")_;_script infofile_;_ZIP::ssf5.xml_;_
 
 ' First, set zoom to 100%
-Window("Google Chrome").Type micCtrlDwn + "0" + micCtrlUp  @@ hightlight id_;_1509550_;_script infofile_;_ZIP::ssf57.xml_;_
+Window("Google Chrome").Type micCtrlDwn + "0" + micCtrlUp @@ hightlight id_;_1509550_;_script infofile_;_ZIP::ssf57.xml_;_
 
 ' Now, set zoom to minimum so that UFT  can see all the values
 Const ZOOM_LEVEL = 8
@@ -123,7 +123,7 @@ planEndDate = Browser("Scenario Details").Page("Change Scenario Constraints").We
 Wait 3
 
 ' Set zoom to 100%
-Window("Google Chrome").Type micCtrlDwn + "0" + micCtrlUp  @@ hightlight id_;_1509550_;_script infofile_;_ZIP::ssf57.xml_;_
+Window("Google Chrome").Type micCtrlDwn + "0" + micCtrlUp @@ hightlight id_;_1509550_;_script infofile_;_ZIP::ssf57.xml_;_
 
 'Is it a Portfolio or a Program?
 If  Browser("Scenario Details").InsightObject("enabledSelectPortfolio").Exist(10) then

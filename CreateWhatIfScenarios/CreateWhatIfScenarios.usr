@@ -12,8 +12,8 @@ DevelopTool=AQT
 
 [Actions]
 Action0=Action0\Script.mts
-20 - Action=Action1\Script.mts
 10 - Login=Action3\Script.mts
+20 - Action=Action1\Script.mts
 30 - Logout=Action4\Script.mts
 
 [VuserProfiles]
@@ -34,7 +34,7 @@ Lang=none
 
 [TulipInfo]
 ProductName=Micro Focus UFT One
-Version=2021
+Version=2022
 
 [TulipAddins]
 AI=
@@ -46,6 +46,7 @@ Windows Applications=
 TEA=
 UI Automation=
 Web=
+WPF=
 XML=
 
 [ExtraFiles]
@@ -56,12 +57,12 @@ Parameters.mtr=
 Action0\Script.mts=
 Action0\Resource.mtr=
 Action0\ObjectRepository.bdb=
-Action1\Script.mts=
-Action1\Resource.mtr=
-Action1\ObjectRepository.bdb=
 Action3\Script.mts=
 Action3\Resource.mtr=
 Action3\ObjectRepository.bdb=
+Action1\Script.mts=
+Action1\Resource.mtr=
+Action1\ObjectRepository.bdb=
 Action4\Script.mts=
 Action4\Resource.mtr=
 Action4\ObjectRepository.bdb=

@@ -40,7 +40,8 @@ Browser("Project Overview_2").Page("Search Staffing Profile").WebButton("PushBut
 'Setting.webpackage("ReplayType") = 1 'Event
 
 nRows  = Browser("Project Overview_2").Page("Search Staffing Profile").WebTable("Profile Name").RowCount
-For row = 2 To nrows ' row 1 is the header row so skip
+'For row = 2 To nrows ' row 1 is the header row so skip
+For row = 30 To nrows ' row 1 is the header row so skip
 	print row -1 & " of " & nRows -1 
 	set projectLink = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").ChildItem (row, 1, "Link",0)
 	projectLink.highlight
@@ -49,7 +50,7 @@ For row = 2 To nrows ' row 1 is the header row so skip
 	projectLink.DoubleClick
 	If projName = "MSP Integration" Then
 		print "skipping project " & projName & " because it is connected to MS Project"
-	ElseIf projName = "Transaction Management" or projName = "Sparta System" Then
+	ElseIf projName = "Transaction Management" or projName = "Sparta System" or projName = "Contactor app" Then
 		print "skipping project " & projName & " because it has no staffing profile"
 	ElseIf projName = "Barcode Asset Collection" or projName = "Sparta System" Then
 		print "skipping project " & projName & " UNKOWN PROBLEM"

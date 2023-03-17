@@ -2,9 +2,9 @@
 
 'until no more browsers exist
 While Browser("creationtime:=0").Exist(0)
-'Close the browser
-Browser("creationtime:=0").highlight
-Browser("creationtime:=0").close
+	'Close the browser
+	Browser("creationtime:=0").highlight
+	Browser("creationtime:=0").close
 Wend
 
 SystemUtil.Run "Chrome.exe", "http://ppmdemo:8084/itg/project/SearchProjects.do"
@@ -13,8 +13,19 @@ Browser("View Work Plan_2").Page("PPM Logon").WebEdit("USERNAME").Set "admin" @@
 Browser("View Work Plan_2").Page("PPM Logon").WebEdit("PASSWORD").SetSecure "61b72773fc97618e2603ae2e84b37b0997032e65c4d6d405" @@ script infofile_;_ZIP::ssf177.xml_;_
 Browser("View Work Plan_2").Page("PPM Logon").WebElement("label-LOGON_SUBMIT_BUTTON_CAPT").Click @@ script infofile_;_ZIP::ssf178.xml_;_
 
+' Set the Results Displayed Per Page textbox to > 50 so that ALL projects are displayed
 Browser("Search Projects_2").Page("Search Projects").WebEdit("pageSize").Set "550" ' ridiculously large number to get them all @@ script infofile_;_ZIP::ssf101.xml_;_
-Browser("Search Projects_2").Page("Search Projects").Link("Search").Click @@ script infofile_;_ZIP::ssf102.xml_;_
+'Browser("Search Projects_2").Page("Search Projects").Link("Search").Click @@ script infofile_;_ZIP::ssf102.xml_;_
+
+'Browser("View Work Plan_2").Page("PPM Logon").WebButton("SEARCH_BUTTON_LINK").Click @@ script infofile_;_ZIP::ssf179.xml_;_
+'Browser("View Work Plan_2").Page("Search Projects").WebButton("SEARCH_BUTTON_LINK").Click
+wait 5
+Browser("View Work Plan_2").Page("PPM Logon").WebButton("SEARCH_BUTTON_LINK").Highlight
+Browser("View Work Plan_2").Page("PPM Logon").WebButton("SEARCH_BUTTON_LINK").Click
+
+' From Jaya
+'Browser("View Work Plan_2").Page("PPM Logon").WebButton("value:=Search,xpath:=//TR/TD/TABLE/TBODY/TR/TD/A[@role='button' and normalize-space()='Search']").Click
+'Browser("View Work Plan_2").Page("PPM Logon").WebButton("name:=Search").Click
 
 nRows  = Browser("Search Projects").Page("Search Projects").WebTable("Select Project to View").RowCount
 For row = 2 To nRows ' row 1 is the header row so skip
@@ -48,19 +59,28 @@ For row = 2 To nRows ' row 1 is the header row so skip
 				
 				' This is an insight recording
 				' needed to record the keystrokes
-				Browser("View Work Plan_2").InsightObject("InsightObject_3").Click @@ hightlight id_;_1_;_script infofile_;_ZIP::ssf155.xml_;_
-				Window("Google Chrome").Type  micShiftDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf156.xml_;_
-				Window("Google Chrome").Type micShiftDwn +  micTab  + micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf157.xml_;_
-				Window("Google Chrome").Type micShiftDwn +  micTab  + micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf158.xml_;_
-				Window("Google Chrome").Type  micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf159.xml_;_
-				Window("Google Chrome").Type  micDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf160.xml_;_
-				Window("Google Chrome").Type  micDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf161.xml_;_
-				Window("Google Chrome").Type  micReturn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf162.xml_;_
+				Browser("View Work Plan_2").Page("View Work Plan").Link("Edit").Click
+
+				'Browser("View Work Plan_2").InsightObject("InsightObject_3").Click @@ hightlight id_;_1_;_script infofile_;_ZIP::ssf155.xml_;_
+'				Browser("View Work Plan_2").InsightObject("InsightObject").Click
+'				Window("Google Chrome").Type  micShiftDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf156.xml_;_
+'				Window("Google Chrome").Type micShiftDwn +  micTab  + micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf157.xml_;_
+'				Window("Google Chrome").Type micShiftDwn +  micTab  + micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf158.xml_;_
+'				Window("Google Chrome").Type  micShiftUp @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf159.xml_;_
+'				Window("Google Chrome").Type  micDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf160.xml_;_
+'				Window("Google Chrome").Type  micDwn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf161.xml_;_
+'				Window("Google Chrome").Type  micReturn @@ hightlight id_;_394254_;_script infofile_;_ZIP::ssf162.xml_;_
+
+				Window("Google Chrome").Type  micDwn
+				Window("Google Chrome").Type  micDwn
+				Window("Google Chrome").Type  micReturn
 	
 				Browser("Search Projects_2").Page("Enter Actuals").WebEdit("actualEffort").Set "0" @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("actualEffort")_;_script infofile_;_ZIP::ssf85.xml_;_
+				
 				if Browser("Search Projects_2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort").Exist (1) then ' some work plans do not have this visible @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort(61262")_;_script infofile_;_ZIP::ssf86.xml_;_
 					Browser("Search Projects_2").Page("Enter Actuals").WebEdit("estimatedRemainingEffort").Set "0"
 				end if			
+				
 				Browser("Search Projects_2").Page("Enter Actuals").WebEdit("percentComplete").Set "0" @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebEdit("percentComplete")_;_script infofile_;_ZIP::ssf87.xml_;_
 				Browser("Search Projects_2").Page("Enter Actuals").WebButton("Save").Click @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebButton("Save")_;_script infofile_;_ZIP::ssf88.xml_;_
 				Browser("Search Projects_2").Page("Enter Actuals").WebButton("Done").Click @@ hightlight id_;_Browser("Search Projects 2").Page("Enter Actuals").WebButton("Done")_;_script infofile_;_ZIP::ssf89.xml_;_
@@ -68,8 +88,7 @@ For row = 2 To nRows ' row 1 is the header row so skip
 				' following 2 lines added Feb 12, 2020
 				Browser("Search Projects_2").Page("Project Overview_2").WebElement("Work Plan Cost").Click @@ hightlight id_;_Browser("Search Projects 2").Page("Project Overview 2").WebElement("Work Plan Cost")_;_script infofile_;_ZIP::ssf64.xml_;_
 				Browser("Search Projects_2").Page("Project Overview_2").Link("View details for the Actual").Click @@ script infofile_;_ZIP::ssf71.xml_;_
-	
-	
+		
 				Browser("Search Projects_2").Page("View Work Plan_5").WebElement("Workaround Task").Click @@ hightlight id_;_Browser("Search Projects 2").Page("View Work Plan 5").WebElement("schedule warning")_;_script infofile_;_ZIP::ssf96.xml_;_
 				Browser("Search Projects_2").Page("View Work Plan_5").WebButton("deleteButton").Click @@ hightlight id_;_Browser("Search Projects 2").Page("View Work Plan 5").WebButton("deleteButton")_;_script infofile_;_ZIP::ssf97.xml_;_
 				Browser("Search Projects_2").Page("View Work Plan_5").Frame("confirmationDelete").WebButton("positive.button").Click @@ hightlight id_;_Browser("Search Projects 2").Page("View Work Plan 5").Frame("confirmationDialogIF").WebButton("positive.button")_;_script infofile_;_ZIP::ssf98.xml_;_
